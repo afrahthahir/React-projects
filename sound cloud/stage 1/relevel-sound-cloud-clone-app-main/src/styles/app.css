@@ -1,0 +1,105 @@
+body {
+  background-color: #282c34;
+  color: white;
+  font-size: 18px;
+}
+
+/* setting app(flexbox container) min-height to 100vh and then footer to margin: auto makes the footer stick to bottom */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px 100px;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  background-color: brown;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 40px brown;
+}
+
+#ball-1 {
+  animation-name: bounce;
+  animation-delay: 1s;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(23px);
+  }
+  60% {
+    transform: translateY(-25px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+.slider_container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+}
+
+.seek_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: linear-gradient(150deg, green 10%, white 90%);
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.seek_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: green;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider {
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 16px;
+}
+.current-time {
+  display: flex;
+  flex-direction: row;
+}
+.max {
+  padding-left: 20px;
+}
+.footer-section {
+  margin-top: auto;
+}
